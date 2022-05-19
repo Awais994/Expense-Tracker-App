@@ -7,11 +7,8 @@ export default function Expense() {
 
     let {transactions , addTransaction,dispatch} = useContext(TransctionContext);
     let [newDesc, setDesc] = useState('');
-    let [newAmount, setAmount] = useState(0);
+    let [newAmount, setAmount] = useState('');
 
-
-    // useEffect(()=>{
-    // },[transactions]);
 
 
     const handleAdd = (e)=>{
@@ -29,7 +26,7 @@ export default function Expense() {
             desc: newDesc
         })
         setDesc('');
-        setAmount(0);
+        setAmount('');
     }
     const getIncome = ()=>{
         let income = 0;
